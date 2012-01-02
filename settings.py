@@ -13,9 +13,10 @@ if sys.modules.has_key('mysite'):
   print "sys.modules['mysite'].__file__ =", sys.modules['mysite'].__file__
   print "os.environ['DJANGO_SETTINGS_MODULE'] =", os.environ.get('DJANGO_SETTINGS_MODULE', None)
 
+
 # Django settings for mysite project.
 try:
-    from settings_private import *
+    from local_settings import *
 except ImportError:
     pass
 
